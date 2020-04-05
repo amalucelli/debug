@@ -15,11 +15,18 @@ make build release
 If you want to spin up a container for debugging things in a Kubernetes, do:
 
 ```sh
-$ kubectl run -i --tty --rm debug --image=amalucelli/debug --restart=Never -- bash
+$ kubectl run -i --tty --rm debug \
+    --image=amalucelli/debug \
+    --restart=Never \
+    -- bash
 ```
 
 Or, if you need to investigate some network issue, you can also attach the host's network namespace with:
 
 ```sh
-$ kubectl run -i --tty --overrides='{"spec":{"hostNetwork":true}}' --image=amalucelli/debug --restart=Never -- bash
+$ kubectl run -i --tty --rm debug \
+    --overrides='{"spec":{"hostNetwork":true}}' \
+    --image=amalucelli/debug \
+    --restart=Never \
+    -- bash
 ```
