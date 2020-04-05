@@ -2,7 +2,7 @@
 
 This is a small container that is useful for debugging things in a docker runtime.
 
-# Building
+## Building
 
 Is simple as:
 
@@ -10,7 +10,7 @@ Is simple as:
 make build release
 ```
 
-# Running
+## Running
 
 If you want to spin up a container for debugging things in a Kubernetes, do:
 
